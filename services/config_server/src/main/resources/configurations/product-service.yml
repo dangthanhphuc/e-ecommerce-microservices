@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://phucdang01235:Pd3Fim8yd3aPPadd@dangthanhphuc.jqh3y.mongodb.net/?retryWrites=true&w=majority&appName=dangthanhphuc
+      database: mongospring
+
+server:
+  port: 8080

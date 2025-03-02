@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native # Specifies where to read the configuration files as being located on local file system
+  cloud:
+    config:
+      server:
+        native: # Specifies where to read the configuration files as being located on local file system
+          search-locations: classpath:/configurations # Specifies the location to search for configuration files in the specified location
+
+server:
+  port: 8888
+
+
