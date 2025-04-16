@@ -5,34 +5,103 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20afdb25-5887-4b78-a438-65e288758236" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/discovery-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/order-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/product-service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/java/org/microservices/order_service/document/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/java/org/microservices/order_service/enums/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/java/org/microservices/order_service/enums/PaymentMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/java/org/microservices/order_service/models/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/java/org/microservices/order_service/models/AppliedCoupon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/java/org/microservices/order_service/models/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/microservices/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k8s/e.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/config/JwtAuthConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/utils/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/api_gateway.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/consumer-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/coupon-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/supplier-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/user_service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/anotations/MinAge.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/anotations/validators/MinAgeValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/controllers/ConsumerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/documents/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/dtos/ConsumerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/exceptions/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/exceptions/IdNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/models/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/repositories/ConsumerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/responses/ConsumerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/responses/ResponseObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/services/ConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/services/IConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/controllers/CouponController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/documents/ConsumerCoupon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/documents/Coupon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/documents/ids/ConsumerCouponId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/repositories/ConsumerCouponRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/repositories/CouponRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/services/ConsumerCouponService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/services/CouponService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/services/IConsumerCouponService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/coupon_service/src/main/java/org/microservices/coupon_service/services/ICouponService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/notification_service/src/main/java/org/microservices/notification_service/service/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/order_service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supplier_service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supplier_service/src/main/java/org/microservices/supplier_service/controllers/SupplierController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supplier_service/src/main/java/org/microservices/supplier_service/documents/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supplier_service/src/main/java/org/microservices/supplier_service/repositories/SupplierRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supplier_service/src/main/java/org/microservices/supplier_service/services/ISupplierService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/supplier_service/src/main/java/org/microservices/supplier_service/services/SupplierService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service/src/main/java/org/microservices/user_service/config/KeycloakConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service/src/main/java/org/microservices/user_service/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service/src/main/java/org/microservices/user_service/dto/ResetPassword.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service/src/main/java/org/microservices/user_service/dto/UserRegistrationRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service/src/main/java/org/microservices/user_service/services/KeycloakUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/user_service/src/main/java/org/microservices/user_service/services/KeycloakUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/config/RouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/config/RouterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/discovery-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/discovery-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/order-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/order-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/product-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/config_server/src/main/resources/configurations/product-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/consumer_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/consumer_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/consumer_service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/consumer_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/order_service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/order_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/order_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/product_service/src/main/java/com/microservices/product_service/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/product_service/src/main/java/com/microservices/product_service/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/product_service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/services/product_service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/microservices/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Exception" />
+        <option value="Dockerfile" />
+        <option value="Kubernetes Pod" />
+        <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2tkb7egchxPHBx0NHcxUVJI1yNL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,25 +112,67 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.docker-compose.yml.kafka-connect: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka-schema-registry: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka-ui: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.keycloak: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.All in supplier_service.executor": "Debug",
+    "Maven.authentication_service [compile].executor": "Run",
+    "Maven.authentication_service [org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile].executor": "Run",
+    "Maven.authentication_service [org.springframework.boot:spring-boot-maven-plugin:3.4.4:run].executor": "Run",
+    "Maven.authentication_service [package].executor": "Run",
+    "Maven.authentication_service [site].executor": "Run",
+    "Maven.order_service [compile].executor": "Run",
+    "Maven.order_service [validate].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.AuthenticationServiceApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.ConsumerServiceApplication.executor": "Run",
+    "Spring Boot.CouponServiceApplication.executor": "Run",
+    "Spring Boot.DiscoveryApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "Spring Boot.SupplierServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Debug",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/admin/Desktop/personal_project/personal_project/e-commerce-be/services",
+    "last_opened_file_path": "C:/Users/admin/OneDrive/Desktop/personal_project/personal_project/e-commerce-be/services/auth_service/pom.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.33504274",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "configurable.group.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Desktop\personal_project\personal_project\e-commerce-be\services\coupon_service\src\main\java\org\microservices\coupon_service" />
+      <recent name="C:\Users\admin\Desktop\personal_project\personal_project\e-commerce-be\services\consumer_service\src\main\java\org\microservices\consumer_service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\OneDrive\Desktop\personal_project\personal_project\e-commerce-be\services" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -72,7 +183,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.microservices.api_gateway.ApiGatewayApplication" />
@@ -87,9 +198,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConsumerServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="consumer_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.microservices.consumer_service.ConsumerServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CouponServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="coupon_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.microservices.coupon_service.CouponServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DiscoveryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="discovery" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.microservices.discovery.DiscoveryApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.microservices.notification_service.NotificationServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,6 +240,112 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SupplierServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="supplier_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.microservices.supplier_service.SupplierServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user_service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.microservices.user_service.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka-connect: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-connect" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.kafka-ui: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="kafka-ui" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="keycloak" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.redis: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="redis" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml.redis: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.kafka-connect: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.kafka-ui: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.DiscoveryApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+      <item itemvalue="Spring Boot.ProductServiceApplication" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.SupplierServiceApplication" />
+      <item itemvalue="Spring Boot.ConsumerServiceApplication" />
+      <item itemvalue="Spring Boot.CouponServiceApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.redis: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.kafka-connect: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.kafka-ui: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,6 +356,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="20afdb25-5887-4b78-a438-65e288758236" name="Changes" comment="" />
@@ -126,10 +367,87 @@
       <option name="presentableId" value="Default" />
       <updated>1740898854562</updated>
       <workItem from="1740898856569" duration="533000" />
+      <workItem from="1740899398342" duration="7135000" />
+      <workItem from="1740985647621" duration="958000" />
+      <workItem from="1741000068417" duration="14644000" />
+      <workItem from="1741054740417" duration="5315000" />
+      <workItem from="1741066135233" duration="6745000" />
+      <workItem from="1741077717144" duration="3014000" />
+      <workItem from="1741271566584" duration="4586000" />
+      <workItem from="1741769807503" duration="107000" />
+      <workItem from="1743315000943" duration="5236000" />
+      <workItem from="1743325286448" duration="449000" />
+      <workItem from="1743325751966" duration="8446000" />
+      <workItem from="1743404409848" duration="6483000" />
+      <workItem from="1743427937903" duration="1184000" />
+      <workItem from="1743476353562" duration="3960000" />
+      <workItem from="1743493757657" duration="569000" />
+      <workItem from="1743506208892" duration="7242000" />
+      <workItem from="1743515152178" duration="2228000" />
+      <workItem from="1743570901128" duration="12000000" />
+      <workItem from="1743772500040" duration="3012000" />
+      <workItem from="1743825454212" duration="8996000" />
+      <workItem from="1743839329739" duration="2665000" />
+      <workItem from="1743933933245" duration="5443000" />
+      <workItem from="1744001699087" duration="716000" />
+      <workItem from="1744004389704" duration="20955000" />
+      <workItem from="1744096352286" duration="988000" />
+      <workItem from="1744526480507" duration="11114000" />
+      <workItem from="1744607087773" duration="14067000" />
+      <workItem from="1744644748072" duration="3475000" />
+      <workItem from="1744713594998" duration="2847000" />
+      <workItem from="1744777411381" duration="9512000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/services/consumer_service/src/main/java/org/microservices/consumer_service/exceptions/GlobalExceptionHandler.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-oauth2-resource-server/6.4.2/spring-security-oauth2-resource-server-6.4.2-sources.jar!/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationConverter.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/services/api-gateway/src/main/java/com/microservices/api_gateway/config/JwtAuthConverter.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="jdk.proxy3.$Proxy139" memberName="h" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="ex.getBindingResult()" language="JAVA" />
+        <watch expression="((com.nimbusds.jose.shaded.gson.internal.LinkedTreeMap)resource).entrySet().toArray()[0]" custom="com.nimbusds.jose.shaded.gson.internal.LinkedTreeMap" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

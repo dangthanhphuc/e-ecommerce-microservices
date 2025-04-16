@@ -14,11 +14,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping()
+@RequestMapping("")
 @RequiredArgsConstructor
 public class ProductController {
 
     private final IProductService productService;
+
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Hello World");
+    }
 
     @GetMapping("")
     public ResponseEntity<ResponseObject<List<Product>>> getAll() {

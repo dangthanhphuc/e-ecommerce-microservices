@@ -18,12 +18,27 @@ public class RouterConfig {
     private static final Logger logger = LoggerFactory.getLogger(RouterConfig.class);
 
     @Bean
+    public RouteLocator userServiceRoutes(RouteLocatorBuilder builder) {
+        return builder.routes()
+                .route("user-service", r -> r
+                        .path("/users/**")
+                        .filters(f -> f
+                                .rewritePath("/users/(?<segment>.*)", "/${segment}")
+                        )
+                        .uri("http://localhost:8086")
+                )
+                .build();
+    }
+
+    @Bean
     public RouteLocator productServiceRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("product-service", r -> r
                         .path("/products/**")
-                        .filters( f -> f.setPath(""))
-                        .uri("http://localhost:8080")
+                        .filters(f -> f
+                                .rewritePath("/products/(?<segment>.*)", "/${segment}")
+                        )
+                        .uri("http://localhost:8085")
                 )
                 .build();
     }
@@ -36,7 +51,7 @@ public class RouterConfig {
                         .filters(f -> f
                                 .setPath("/api-docs")
                         )
-                        .uri("http://localhost:8080")
+                        .uri("http://localhost:8085")
                 )
                 .route("order-service-swagger", r -> r
                         .path("/aggregate/order-service/api-docs")
@@ -44,6 +59,34 @@ public class RouterConfig {
                             .setPath("/api-docs")
                         )
                         .uri("http://localhost:8081")
+                )
+                .route("user-service-swagger", r -> r
+                        .path("/aggregate/user-service/api-docs")
+                        .filters(f -> f
+                                .setPath("/api-docs")
+                        )
+                        .uri("http://localhost:8086")
+                )
+                .route("supplier-service-swagger", r -> r
+                        .path("/aggregate/supplier-service/api-docs")
+                        .filters(f -> f
+                                .setPath("/api-docs")
+                        )
+                        .uri("http://localhost:8083")
+                )
+                .route("coupon-service-swagger", r -> r
+                        .path("/aggregate/coupon-service/api-docs")
+                        .filters(f -> f
+                                .setPath("/api-docs")
+                        )
+                        .uri("http://localhost:8084")
+                )
+                .route("consumer-service-swagger", r -> r
+                        .path("/aggregate/consumer-service/api-docs")
+                        .filters(f -> f
+                                .setPath("/api-docs")
+                        )
+                        .uri("http://localhost:8082")
                 )
                 .build();
     }

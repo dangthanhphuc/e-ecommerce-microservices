@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: notification_service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notificationService
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      properties:
+        spring.json.type.mapping: event:com.microservices.notification_service.model.Event

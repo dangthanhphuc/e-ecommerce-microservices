@@ -1,0 +1,14 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://phucdang01235:Pd3Fim8yd3aPPadd@dangthanhphuc.jqh3y.mongodb.net/?retryWrites=true&w=majority&appName=dangthanhphuc
+      database: order-service
+
+
+server:
+  port: 8082
+
+# Springdoc using openapi through swagger ui
+springdoc:
+  api-docs:
+    path: /api-docs

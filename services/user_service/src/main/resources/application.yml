@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: user_service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+
+keycloak:
+  hostname: localhost:9090
+  realm: spring-microservices-security-realm
+  admin-client-id: admin-cli
+  admin-client-secret: jsJf8kEQ4vWyBoUU8NO4Cd3L7YPf2i58
+  client: spring-microservice-client-id
+  urls:
+    auth: http://${keycloak.hostname}

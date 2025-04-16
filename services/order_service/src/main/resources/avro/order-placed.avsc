@@ -1,0 +1,19 @@
+{
+  "type": "record",
+  "namespace": "org.microservices.order_service.events",
+  "name": "OrderPlacedEvent",
+  "fields": [
+    {
+      "name": "orderNumber",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "name",
+      "type": "string"
+    }
+  ]
+}

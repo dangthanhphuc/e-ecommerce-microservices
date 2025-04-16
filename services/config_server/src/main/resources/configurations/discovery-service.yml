@@ -6,5 +6,11 @@ eureka:
     fetch-registry: false # Make sure not to fetch registry from eureka server (The service itself is eureka server)
     service-url: # Map<String, String>
       defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka/
+
 server:
   port: 8761
+
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF

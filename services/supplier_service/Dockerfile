@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+LABEL authors="admin"
+
+ENTRYPOINT ["top", "-b"]
+
+sha256:5dfc3c131eb7b45f61a68087ef28db6dd32104884749d13a2fa00075b96f22d8
+
+sha256:5dfc3c131eb7b45f61a68087ef28db6dd32104884749d13a2fa00075b96f22d8

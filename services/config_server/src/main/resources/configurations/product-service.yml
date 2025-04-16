@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://phucdang01235:Pd3Fim8yd3aPPadd@dangthanhphuc.jqh3y.mongodb.net/?retryWrites=true&w=majority&appName=dangthanhphuc
-      database: mongospring
+      database: product-service
 
 server:
-  port: 8080
+  port: 8085
